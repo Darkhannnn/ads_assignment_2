@@ -122,7 +122,6 @@ public class MyLinkedList<T> implements MyList<T>{
 
     @Override
     public void sort() {
-
     }
 
     @Override

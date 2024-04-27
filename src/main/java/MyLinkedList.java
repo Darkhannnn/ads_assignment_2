@@ -1,5 +1,6 @@
 public class MyLinkedList<T> implements MyList<T>{
     private class MyNode<E>{
+        //    declaring needed variables
         E element;
         MyNode<E> next;
         MyNode<E> prev;
@@ -122,6 +123,30 @@ public class MyLinkedList<T> implements MyList<T>{
 
     @Override
     public void sort() {
+        boolean swapped;
+        do{
+            swapped = false;
+            MyNode<T> current = head;
+            MyNode<T> previous = null;
+            while (current.next != null){
+                if (((Comparable<T>)current.element).compareTo(current.next.element) > 0){
+                    if (previous == null){
+                        head = current.next;
+                    }else {
+                        previous.next = current.next;
+                    }
+                    MyNode<T> nextNode = current.next;
+                    current.next = nextNode.next;
+                    nextNode.next = current;
+                    if (current.next == null){
+                        tail = current;
+                    }
+                    swapped = true;
+                }
+                previous = current;
+                current = current.next;
+            }
+        } while (swapped);
     }
 
     @Override

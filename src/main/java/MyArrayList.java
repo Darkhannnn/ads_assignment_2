@@ -1,4 +1,5 @@
 public class MyArrayList<T> implements MyList<T>{
+//    declaring needed variables
     private T[] arr;
     private int size;
 
@@ -6,6 +7,7 @@ public class MyArrayList<T> implements MyList<T>{
         arr = (T[]) new Object[5];
         size = 0;
     }
+
     @Override
     public void add(T item) {
         if (size >= arr.length){

@@ -1,6 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-
         System.out.println("ArrayList's methods examples");
         MyArrayList array = new MyArrayList<>();
         array.add(1);

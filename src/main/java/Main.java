@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("ArrayList examples");
+
+        System.out.println("ArrayList's methods examples");
         MyArrayList array = new MyArrayList<>();
         array.add(1);
         array.add(2);
@@ -23,7 +24,7 @@ public class Main {
         array.clear();
 
         System.out.println();
-        System.out.println("LinkedList examples");
+        System.out.println("LinkedList's methods examples");
 
         MyLinkedList linkedList = new MyLinkedList<>();
 
@@ -47,5 +48,38 @@ public class Main {
 
         linkedList.clear();
         System.out.println(linkedList.size());
+
+        System.out.println();
+        System.out.println("MyStack's methods examples");
+
+        MyStack stack = new MyStack<>();
+
+        stack.push(5);
+        stack.push(10);
+        stack.push(15);
+        stack.push(20);
+
+        System.out.println("top element " + stack.peek());
+
+        System.out.println("popped element " + stack.pop());
+
+        System.out.println("is empty? " + stack.empty());
+
+        System.out.println();
+        System.out.println("MyQueue's methods examples");
+
+        MyQueue queue = new MyQueue<>();
+
+        queue.enqueue(5);
+        queue.enqueue(10);
+        queue.enqueue(15);
+        queue.enqueue(20);
+
+        System.out.println("front element " + queue.peek());
+
+        System.out.println("dequeued element " + queue.dequeue());
+
+        System.out.println("is empty? " + queue.empty());
+
     }
 }
